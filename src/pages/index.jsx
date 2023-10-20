@@ -38,18 +38,23 @@ linksHeaderElm.forEach((link) => {
   link.addEventListener('click', toggleNav);
 });
 //---------------------------
-//změná ordered na true po kliknutí, ale NEJDE to
-// const orderBtnElm = document.querySelectorAll('.order-btn');
-// orderBtnElm.forEach((button) => {
-//   button.addEventListener('click', async (e) => {
-//     await fetch(`http://localhost:4000/api/drinks/${e.target.id}`, {
-//       method: 'PATCH',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify({
-//         ordered: true,
-//       }),
-//     });
-//   });
-// });
+//změna ordered na true po kliknutí
+const orderBtnElm = document.querySelectorAll('.order-btn');
+orderBtnElm.forEach((button) => {
+  button.addEventListener('click', async (e) => {
+    await fetch(`http://localhost:4000/api/drinks/${e.target.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify([
+        {
+          op: 'replace',
+          path: '/ordered',
+          value: !drinks[e.target.id].ordered,
+        },
+      ]),
+    });
+    location.reload();
+  });
+});
