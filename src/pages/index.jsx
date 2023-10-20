@@ -1,18 +1,22 @@
 import { render } from '@czechitas/render';
 import '../global.css';
 import './index.css';
+import { Header } from '../components/Header';
+import { Banner } from '../components/Banner';
+import { Menu } from '../components/Menu';
+import { Gallery } from '../components/Gallery';
+import { Contact } from '../components/Contact';
+import { Footer } from '../components/Footer';
 
 document.querySelector('#root').innerHTML = render(
-  <div className="container">
-    <header>
-      <div className="logo"></div>
-      <h1>Webová aplikace</h1>
-    </header>
+  <div className="page">
+    <Header />
     <main>
-      <p>Startovací šablona pro webovou aplikaci v JavaScriptu s JSX. Vytvořeno pomocí <a href="https://www.npmjs.com/package/create-kodim-app">create-kodim-app</a>.</p>
+      <Banner />
+      <Menu />
+      <Gallery />
+      <Contact />
     </main>
-    <footer>
-      <p>Czechitas, Digitální akademie: Web</p>
-    </footer>
-  </div>
+    <Footer />
+  </div>,
 );
