@@ -7,6 +7,7 @@ import { Menu } from '../components/Menu';
 import { Gallery } from '../components/Gallery';
 import { Contact } from '../components/Contact';
 import { Footer } from '../components/Footer';
+// Metoda GET
 const response = await fetch('http://localhost:4000/api/drinks');
 const data = await response.json();
 const drinks = data.result;
@@ -14,7 +15,7 @@ console.log(drinks);
 
 document.querySelector('#root').innerHTML = render(
   <div className="page">
-    <Header />
+    <Header showMenu={false} />
     <main>
       <Banner />
       <Menu drinks={drinks} />
@@ -24,7 +25,7 @@ document.querySelector('#root').innerHTML = render(
     <Footer />
   </div>,
 );
-
+// Hamburger menu
 const navBtnElm = document.querySelector('.nav-btn');
 const rolloutElm = document.querySelector('.rollout-nav');
 const linksHeaderElm = document.querySelectorAll('.rollout-nav a');
@@ -36,3 +37,19 @@ navBtnElm.addEventListener('click', toggleNav);
 linksHeaderElm.forEach((link) => {
   link.addEventListener('click', toggleNav);
 });
+//---------------------------
+//změná ordered na true po kliknutí, ale NEJDE to
+// const orderBtnElm = document.querySelectorAll('.order-btn');
+// orderBtnElm.forEach((button) => {
+//   button.addEventListener('click', async (e) => {
+//     await fetch(`http://localhost:4000/api/drinks/${e.target.id}`, {
+//       method: 'PATCH',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify({
+//         ordered: true,
+//       }),
+//     });
+//   });
+// });

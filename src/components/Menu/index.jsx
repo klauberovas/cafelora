@@ -13,6 +13,7 @@ export const Menu = ({ drinks }) => {
             let url = 'http://localhost:4000' + item.image;
             return (
               <Drink
+                id={item.id}
                 key={item.id}
                 name={item.name}
                 ordered={item.ordered}
@@ -24,7 +25,7 @@ export const Menu = ({ drinks }) => {
         </div>
 
         <div className="order-detail">
-          <a href="/objednavka">Detail objednávky</a>
+          <a href="/order.html">Detail objednávky</a>
         </div>
       </div>
     </section>
