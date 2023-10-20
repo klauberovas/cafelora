@@ -20,3 +20,15 @@ document.querySelector('#root').innerHTML = render(
     <Footer />
   </div>,
 );
+
+const navBtnElm = document.querySelector('.nav-btn');
+const rolloutElm = document.querySelector('.rollout-nav');
+const linksHeaderElm = document.querySelectorAll('.rollout-nav a');
+//přepínač na rollout
+const toggleNav = () => rolloutElm.classList.toggle('nav-closed');
+//posluchač na roletku
+navBtnElm.addEventListener('click', toggleNav);
+//posluchač na odkazy v roletce
+linksHeaderElm.forEach((link) => {
+  link.addEventListener('click', toggleNav);
+});

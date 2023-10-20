@@ -4,7 +4,7 @@ export const Header = () => {
       <div className="header__content container">
         <div className="site-logo"></div>
 
-        <div className="navigation">
+        <div className="navigation" id="home">
           <button className="nav-btn"></button>
           <nav className="rollout-nav nav-closed">
             <a href="#home">domů</a>
