@@ -21,7 +21,7 @@ export const Drink = ({ name, ordered, image, layers, id }) => {
         <button
           id={id}
           className={`order-btn ${
-            ordered ? '' : 'order-btn order-btn--ordered'
+            ordered ? 'order-btn order-btn--ordered' : ''
           }`}
         >
           {ordered ? 'Zrušit' : 'Objednat'}

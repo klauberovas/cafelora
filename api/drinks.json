@@ -102,7 +102,7 @@
   {
     "id": 7,
     "name": "Romano",
-    "ordered": false,
+    "ordered": true,
     "layers": [
       {
         "color": "#fbdf5b",
@@ -318,7 +318,7 @@
   {
     "id": 18,
     "name": "Vídeňská káva",
-    "ordered": false,
+    "ordered": true,
     "layers": [
       {
         "color": "#feeeca",

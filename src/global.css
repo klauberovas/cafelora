@@ -62,7 +62,6 @@ a {
   min-height: 100vh;
 }
 
-
 header {
   padding: 1rem 0 1rem 0;
   height: 5rem;
@@ -136,6 +135,7 @@ nav a:hover {
   cursor: pointer;
 }
 
+
 @media (min-width: 768px) {
   .navigation {
     flex-direction: row;
@@ -172,19 +172,4 @@ nav a:hover {
 
     text-align: center;
   }
-}
-
-
-footer {
-  padding: 2rem 0;
-
-  background-color: #301a1a;
-}
-
-.footer__content {
-  max-width: 25rem;
-  margin: 0 auto;
-
-  font-size: small;
-  text-align: center;
 }

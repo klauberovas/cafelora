@@ -25,7 +25,7 @@ document.querySelector('#root').innerHTML = render(
     <Footer />
   </div>,
 );
-// Hamburger menu
+// HAMBURGER MENU (skrývání a odkrývání)
 const navBtnElm = document.querySelector('.nav-btn');
 const rolloutElm = document.querySelector('.rollout-nav');
 const linksHeaderElm = document.querySelectorAll('.rollout-nav a');
@@ -38,7 +38,7 @@ linksHeaderElm.forEach((link) => {
   link.addEventListener('click', toggleNav);
 });
 //---------------------------
-//změna ordered na true po kliknutí
+//změna ORDERED NA TRUE po kliknutí a odeslání změny na API
 const orderBtnElm = document.querySelectorAll('.order-btn');
 orderBtnElm.forEach((button) => {
   button.addEventListener('click', async (e) => {
