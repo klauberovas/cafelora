@@ -8,9 +8,10 @@ import { Gallery } from '../components/Gallery';
 import { Contact } from '../components/Contact';
 import { Footer } from '../components/Footer';
 // Metoda GET
-const response = await fetch('http://localhost:4000/api/drinks');
-const data = await response.json();
-const drinks = data.result;
+const response = await fetch('/api/drinks.json');
+// const data = await response.json();
+console.log(response);
+const drinks = response.result;
 console.log(drinks);
 
 document.querySelector('#root').innerHTML = render(
