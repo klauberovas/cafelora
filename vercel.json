@@ -1,4 +1,17 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/drinks.json",
+      "use": "@now/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/drinks.json",
+      "dest": "/api/drinks.json"
+    }
+  ],
   "routes" : {
     "api/*" : {
       "headers" : {
