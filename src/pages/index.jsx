@@ -8,7 +8,7 @@ import { Gallery } from '../components/Gallery';
 import { Contact } from '../components/Contact';
 import { Footer } from '../components/Footer';
 // Metoda GET
-const response = await fetch('https://cafelora-v8ih-5ambe0thq-klauberovas-projects.vercel.app/api/drinks.json');
+const response = await fetch('https://cafelora-v8ih.vercel.app/api/drinks.json');
 const data = await response.json();
 const drinks = data.result;
 console.log(drinks);
